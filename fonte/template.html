@@ -158,7 +158,9 @@ a{color:inherit}
 .vote{display:inline-flex;align-items:center;gap:12px;margin-top:18px;background:var(--yel);color:var(--ink);text-decoration:none;
   font-family:Archivo,sans-serif;font-stretch:70%;font-weight:850;font-size:21px;text-transform:uppercase;padding:13px 22px;border-radius:999px;box-shadow:4px 5px 0 var(--ink);transition:transform .15s,box-shadow .15s}
 .vote:hover{transform:translate(-2px,-2px);box-shadow:6px 7px 0 var(--ink)}
-.vote small{font-family:Mono,monospace;font-size:11px;letter-spacing:.12em;font-weight:600;opacity:.7}
+.vote small{font-family:Mono,monospace;font-size:11px;letter-spacing:.12em;font-weight:600;opacity:.7;text-transform:none}
+.row p.also{margin-top:16px;font-size:15.5px;color:rgba(243,238,228,.85)}
+.final .vote{margin-top:22px;background:var(--paper)}
 .warn{margin-top:36px;display:grid;grid-template-columns:auto 1fr;gap:18px;align-items:start;background:rgba(23,21,18,.18);border:1px solid rgba(243,238,228,.35);padding:22px 24px;max-width:860px}
 .warn .mono{color:var(--yel);font-size:11.5px;padding-top:3px}
 .warn p{font-size:17px;line-height:1.45}
@@ -212,7 +214,11 @@ footer{background:var(--ink);color:rgba(243,238,228,.75);padding-block:48px 56px
 .foot{display:flex;flex-wrap:wrap;justify-content:space-between;gap:28px;align-items:flex-end}
 .foot .sig{font-family:Archivo,sans-serif;font-stretch:62%;font-weight:860;font-size:44px;text-transform:uppercase;line-height:.9;color:var(--paper)}
 .foot .sig span{color:var(--red)}
-.foot ul{list-style:none;display:flex;flex-wrap:wrap;gap:8px 22px}
+.foot ul{list-style:none;display:flex;flex-wrap:wrap;gap:18px 40px}
+.foot li{display:flex;flex-direction:column;gap:7px}
+.foot .lbl{font-size:10.5px;letter-spacing:.22em;color:rgba(243,238,228,.45)}
+.foot .lbl::before{content:"";display:inline-block;width:6px;height:6px;background:var(--red);margin-right:8px;vertical-align:1px}
+@media (max-width:600px){.foot ul{flex-direction:column;gap:18px}}
 .foot a{color:var(--paper);text-underline-offset:4px;text-decoration-color:rgba(243,238,228,.4)}
 .foot .fine{margin-top:22px;max-width:none;width:100%;color:rgba(243,238,228,.5)}
 
@@ -399,8 +405,9 @@ footer{background:var(--ink);color:rgba(243,238,228,.75);padding-block:48px 56px
       <div class="row">
         <h3 class="disp">Cobra</h3>
         <div>
-          <p>O imposto sobre grandes fortunas está na Constituição desde 1988 e nunca foi cobrado. Em 2024, a Câmara rejeitou criar o imposto por 262 votos a 136. Em 2025, o STF declarou o Congresso em mora. A consulta pública do Senado está aberta.</p>
-          <a class="vote" href="{{L:ec}}" target="_blank" rel="noopener"><span style="white-space:nowrap">Vota SIM no e-Cidadania</span> <small>PLP 183/2019 ↗</small></a>
+          <p>O imposto sobre grandes fortunas está na Constituição desde 1988 e nunca foi cobrado. Em 2024, a Câmara rejeitou criar o imposto por 262 votos a 136. Em 2025, o STF declarou o Congresso em mora. Agora o PLP 307/2026 propõe cobrar de 0,7% a 3% ao ano de quem tem patrimônio líquido acima de R$ 15 milhões. O abaixo-assinado pede que a Câmara coloque o projeto em votação.</p>
+          <a class="vote" href="{{L:pet}}" target="_blank" rel="noopener"><span style="white-space:nowrap">Assina o abaixo-assinado</span> <small>alma.al/taxar ↗</small></a>
+          <p class="also">E vota SIM na consulta pública do Senado: <a href="{{L:ec}}" target="_blank" rel="noopener" style="white-space:nowrap">e-Cidadania, PLP 183/2019 ↗</a></p>
         </div>
       </div>
     </div>
@@ -408,7 +415,7 @@ footer{background:var(--ink);color:rgba(243,238,228,.75);padding-block:48px 56px
       <p class="mono">Antes de qualquer coisa</p>
       <p>Boicote é deixar de comprar, assinar ou assistir. Nada aqui pede ataque a quem trabalha nessas empresas. As ideias mais radicais, como a greve de dívida, estão no dossiê como desobediência civil pra debate, com os riscos escritos do lado. Não é pra fazer sozinha: quem para de pagar por conta própria fica sozinha com as consequências.</p>
     </div>
-    <p class="src">Fato: Câmara dos Deputados, votação de 30/10/2024, via <a href="{{L:met}}" target="_blank" rel="noopener">Metrópoles</a>; STF, ADO 55 (6/11/2025); Senado, <a href="{{L:ec}}" target="_blank" rel="noopener">e-Cidadania</a>.</p>
+    <p class="src">Fato: Câmara dos Deputados, votação de 30/10/2024, via <a href="{{L:met}}" target="_blank" rel="noopener">Metrópoles</a>; STF, ADO 55 (6/11/2025); Senado, <a href="{{L:ec}}" target="_blank" rel="noopener">e-Cidadania</a>; Câmara, PLP 307/2026, via <a href="{{L:plp}}" target="_blank" rel="noopener">Atlas Público</a>.</p>
   </div>
 </section>
 
@@ -418,6 +425,7 @@ footer{background:var(--ink);color:rgba(243,238,228,.75);padding-block:48px 56px
     <h2 id="milhoes" class="disp">Eles cabem em dois quarteirões. <mark>Nós somos milhões.</mark></h2>
     <p class="lede">E nós não somos gado. Daqui pra frente, quem dita o mercado somos nós.</p>
     <a class="buy" href="{{PDF}}" download="{{PDF_DL}}">Baixar o dossiê <small>PDF · 29 págs.</small><span class="burst" aria-hidden="true"><span>GRÁTIS<i>*</i></span></span></a>
+    <br><a class="vote" href="{{L:pet}}" target="_blank" rel="noopener"><span style="white-space:nowrap">Assina: quem tem mais, paga mais</span> <small>alma.al/taxar ↗</small></a>
     <div class="share">
       <p class="mono">Passa pra frente</p>
       <ul>
@@ -446,7 +454,7 @@ footer{background:var(--ink);color:rgba(243,238,228,.75);padding-block:48px 56px
       </dl>
       <div class="site-note">
         <p class="mono">Este site</p>
-        <p>Não usa cookie, pixel, rastreador, anúncio nem formulário. As fontes tipográficas estão hospedadas aqui mesmo. A hospedagem só registra os acessos técnicos que todo servidor registra.</p>
+        <p>Não usa cookie, pixel, rastreador, anúncio nem formulário. O PDF, as imagens e as fontes tipográficas vêm do jsDelivr, uma rede pública e gratuita de distribuição de arquivos. A hospedagem e o jsDelivr só registram os acessos técnicos que todo servidor registra.</p>
       </div>
       <details class="fontes">
         <summary>Todas as fontes<small>{{NLINKS}} links</small></summary>
@@ -464,9 +472,9 @@ footer{background:var(--ink);color:rgba(243,238,228,.75);padding-block:48px 56px
   <div class="wrap foot">
     <div class="sig">A engenharia<br>do golpe<span>.</span></div>
     <ul class="mono">
-      <li><a href="https://www.instagram.com/alma.prazer/" target="_blank" rel="noopener">@alma.prazer</a></li>
-      <li><a href="https://alma.al/">alma.al</a></li>
-      <li><a href="mailto:hello@alma.al">hello@alma.al</a></li>
+      <li><span class="lbl">Instagram</span><a href="https://www.instagram.com/alma.prazer/" target="_blank" rel="noopener">@alma.prazer</a></li>
+      <li><span class="lbl">Site</span><a href="https://alma.al/">alma.al</a></li>
+      <li><span class="lbl">E-mail</span><a href="mailto:hello@alma.al">hello@alma.al</a></li>
     </ul>
     <p class="fine">Por Alma · novembro de 2026 · Ilustrações feitas com IA; a capa faz referência aos cartazes de FOME colados no touro da B3 em 2021. Fato tem fonte. Leitura é opinião.</p>
   </div>
