@@ -3,8 +3,8 @@
 import json, html
 
 SITE = 'https://alma.al/dossiemercado/'
-REEL_URL = 'https://www.instagram.com/alma.prazer/'   # trocar pelo link do Reel quando publicar
-CDN = 'https://cdn.jsdelivr.net/gh/almacriacao/dossie-mercado@3a45fd4f1ece2635e00a89b48139e459c8644ce6/'   # arquivos pesados servidos por CDN
+REEL_URL = 'https://www.instagram.com/reel/DgDt3acPaHh/'
+CDN = 'https://cdn.jsdelivr.net/gh/almacriacao/dossie-mercado@391b69eafa4ca4b32d5578f77d496abf9a98c750/'   # arquivos pesados servidos por CDN
 PDF = CDN + 'A-engenharia-do-golpe.pdf'
 PDF_DL = 'A-engenharia-do-golpe-Alma.pdf'
 
@@ -38,7 +38,7 @@ L = {
  'itau': 'https://www.infomoney.com.br/mercados/itau-itub4-resultados-quarto-trimestre-2025/',
  'met': 'https://www.metropoles.com/brasil/camara-votacao-regulamentacao-reforma-tributaria',
  'ec': 'https://www12.senado.leg.br/ecidadania/visualizacaomateria?id=137929',
- 'pet': 'https://www.change.org/p/quem-tem-mais-paga-mais-taxem-as-grandes-fortunas',
+ 'pet': 'https://www.change.org/TaxaOsRicos',
  'plp': 'https://atlaspublico.com.br/camara/noticias/deputados-do-pt-psol-pcdob-e-pv-apresentam-projeto-que-102591',
 }
 

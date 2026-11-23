@@ -15,4 +15,4 @@
 </IfModule>
 # PDF, imagens e fontes agora vêm do jsDelivr (repositório almacriacao/dossie-mercado).
 # Links antigos pro PDF são redirecionados pra lá.
-Redirect 302 /dossiemercado/A-engenharia-do-golpe.pdf https://cdn.jsdelivr.net/gh/almacriacao/dossie-mercado@3a45fd4f1ece2635e00a89b48139e459c8644ce6/A-engenharia-do-golpe.pdf
+Redirect 302 /dossiemercado/A-engenharia-do-golpe.pdf https://cdn.jsdelivr.net/gh/almacriacao/dossie-mercado@391b69eafa4ca4b32d5578f77d496abf9a98c750/A-engenharia-do-golpe.pdf
