@@ -4,7 +4,7 @@ import json, html
 
 SITE = 'https://alma.al/dossiemercado/'
 REEL_URL = 'https://www.instagram.com/reel/DgDt3acPaHh/'
-CDN = 'https://cdn.jsdelivr.net/gh/almacriacao/dossie-mercado@68ae00c63940e0a8da34f5008a3ddf163e24d4c4/'   # arquivos pesados servidos por CDN
+CDN = 'https://cdn.jsdelivr.net/gh/almacriacao/dossie-mercado@56af4a59a15e673c3c5d274e830e47899d45106f/'   # arquivos pesados servidos por CDN
 PDF = CDN + 'A-engenharia-do-golpe.pdf'
 PDF_DL = 'A-engenharia-do-golpe-Alma.pdf'
 
