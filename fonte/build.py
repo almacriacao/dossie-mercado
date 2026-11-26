@@ -7,6 +7,7 @@ REEL_URL = 'https://www.instagram.com/reel/DgDt3acPaHh/'
 CDN = 'https://cdn.jsdelivr.net/gh/almacriacao/dossie-mercado@2d2acb830b2db718db3587a3422f1fcda1f6f23c/'   # arquivos pesados servidos por CDN
 PDF = CDN + 'A-engenharia-do-golpe.pdf'
 PDF_DL = 'A-engenharia-do-golpe-Alma.pdf'
+BAIXAR = '/dossiemercado/baixar/'   # conta o clique e redireciona pro PDF (site/dossiemercado/baixar/index.php no alma-site)
 
 src = json.load(open('/home/claude/site/sources.json'))
 def fix(t):
@@ -46,7 +47,7 @@ SHARE_TXT = 'A engenharia do golpe: como os bilionários transformam uma derrota
 
 tpl = open('/home/claude/site/template.html').read()
 out = (tpl.replace('{{SOURCES}}', SOURCES).replace('{{NLINKS}}', str(NLINKS))
-          .replace('{{REEL}}', REEL_URL).replace('{{PDF}}', PDF).replace('{{PDF_DL}}', PDF_DL)
+          .replace('{{REEL}}', REEL_URL).replace('{{PDF}}', PDF).replace('{{PDF_DL}}', PDF_DL).replace('{{BAIXAR}}', BAIXAR)
           .replace('{{SITE}}', SITE).replace('{{CDN}}', CDN).replace('{{SHARE_TXT}}', html.escape(SHARE_TXT)))
 for k, v in L.items():
     out = out.replace('{{L:' + k + '}}', html.escape(v))
